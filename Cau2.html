@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+function tryRemoveFromArray(arr,n) {
+    for (let i = 0;i <arr.length;i++) {
+        if (arr[i] === n) {
+            for(let j = i;j <arr.length;j++) {
+                arr[j] = arr[j + 1];
+            }
+            arr.pop();
+        }
+    }
+    return arr;
+}
+let arr1 = [12,6,3,7,8,5,7];
+let n = 6;
+let arr2 = tryRemoveFromArray(arr1,n);
+console.log(arr2);
+</script>
+</html>

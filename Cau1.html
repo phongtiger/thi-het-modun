@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function findMaxScore(arrayIn) {
+        let valueMaxOfArray = arrayIn[0];
+        for (let i = 1; i < arrayIn.length; i++) {
+            if (valueMaxOfArray < arrayIn[i]) {
+                valueMaxOfArray = arrayIn[i];
+            }
+        }
+        return valueMaxOfArray;
+    }
+    let arr = [-10,-5,-2,-8,-1,-6,-8];
+    let valueMax = findMaxScore(arr);
+    console.log(valueMax);
+</script>
+</html>

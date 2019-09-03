@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id = "myCanvas" width="1368px" height="768px" style="border: 1px solid #d3d3d3;"></canvas>
+</body>
+<script>
+    let Rectangle = function (x,y,width,height,color) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.color = color;
+        this.getX = function () {
+            return this.x;
+        };
+        this.getY = function () {
+            return this.y;
+        };
+        this.getWidth = function () {
+            return this.width;
+        };
+        this.getHeight = function () {
+            return this.height;
+        };
+        this.getColor = function () {
+            return this.color;
+        };
+        this.setX = function (x) {
+            this.x = x;
+        };
+        this.setWidth = function (width) {
+            this.width = width;
+        };
+        this.setHeight = function (height) {
+            this.height = height;
+        };
+        this.setColor = function (color) {
+            this.color = color;
+        };
+        this.render = function (x,y,wight,height,color,idCanvas) {
+            let c = document.getElementById(idCanvas);
+            let ctx = c.getContext("2d");
+            ctx.fillStyle = color;
+            ctx.fillRect(x,y,wight,height);
+        }
+    };
+    let rectangle = new Rectangle(10,10,200,100,"#000000");
+    let x = rectangle.getX();
+    let y = rectangle.getY();
+    let wight = rectangle.getWidth();
+    let height = rectangle.getHeight();
+    let color = rectangle.getColor();
+    rectangle.render(x,y,wight,height,color,"myCanvas");
+</script>
+</html>

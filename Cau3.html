@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function printFibonacci(n) {
+        document.write("1"+"<br/>");
+        document.write("1"+"<br/>");
+        let firstNumber = 1;
+        let secondNumber = 1;
+        let thirdNumber = 2;
+        while (thirdNumber < n) {
+            document.write(thirdNumber+"<br/>");
+            firstNumber = secondNumber;
+            secondNumber = thirdNumber;
+            thirdNumber = firstNumber + secondNumber;
+        }
+    }
+    let n = 12;
+    printFibonacci(n);
+</script>
+</html>
